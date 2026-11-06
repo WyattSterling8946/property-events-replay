@@ -1,0 +1,21 @@
+{
+  "name": "property-events-replay",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx src/property_backend.ts",
+    "setup": "tsx src/register_property_webhook.ts",
+    "deliveries": "tsx src/redrive_failed_deliveries.ts",
+    "test": "tsx --test test/property_events.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.4",
+    "tsx": "^4.19.3",
+    "typescript": "^5.7.3"
+  }
+}

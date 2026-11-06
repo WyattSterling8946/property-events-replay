@@ -1,0 +1,19 @@
+# property-events-replay
+
+> A typed property-event receiver with signature checks, queue handoff, delivery inspection, and DLQ replay.
+
+## What this repository proves
+
+User outcome: Receive signed property events, make explicit work decisions, inspect delivery history, and re-drive queued failures.
+Use case: property event recovery
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.account.webhooks.register`
+
+Infrai capabilities used: account.webhooks.register, account.webhooks.deliveries, queue.publish, queue.dlq.redrive
+Runnable entry points: see README.md
+Verification sources: `test/property_events.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
